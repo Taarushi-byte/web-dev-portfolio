@@ -18,23 +18,12 @@
       text-align: center;
     }
 
-    /* HERO */
     .hero {
       background: #000;
       color: white;
       padding: 80px 20px;
     }
 
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      opacity: 0.8;
-    }
-
-    /* FEATURES */
     .features {
       display: flex;
       justify-content: center;
@@ -51,15 +40,8 @@
       cursor: pointer;
       font-size: 16px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
     }
 
-    .feature-btn:hover {
-      transform: translateY(-3px);
-      background: #e9f1ff;
-    }
-
-    /* CTA */
     .cta-btn {
       margin-top: 30px;
       background: #1e73ff;
@@ -69,14 +51,8 @@
       border-radius: 10px;
       font-size: 18px;
       cursor: pointer;
-      transition: 0.3s;
     }
 
-    .cta-btn:hover {
-      background: #0f5be0;
-    }
-
-    /* MODAL */
     .modal {
       position: fixed;
       inset: 0;
@@ -93,47 +69,53 @@
       max-width: 400px;
       width: 90%;
     }
-
-    .close {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: none;
-      background: #ff4d4d;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 28px;
-      }
-
-      .feature-btn {
-        width: 90%;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
   <section class="hero">
     <h1>My Web Portfolio</h1>
     <p>Clean, responsive, and modular web design</p>
   </section>
 
-  <!-- FEATURES -->
   <section class="features">
     <button class="feature-btn" onclick="showInfo('Responsive Design adapts to all screen sizes.')">
       Responsive Design
     </button>
 
-    <button class="feature-btn" onclick="showInfo('Modern UI with clean layout and smooth UX.')">
+    <button class="feature-btn" onclick="showInfo('Modern UI with clean layout.')">
       Modern UI
     </button>
 
-    <button class="feature-btn" onclick="showInfo('Optimized performance for fast lo
+    <button class="feature-btn" onclick="showInfo('Optimized Performance ensures fast loading.')">
+      Optimized Performance
+    </button>
+  </section>
 
+  <button class="cta-btn" onclick="openModal()">Click Me</button>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>It works! 🎉</h2>
+      <p>Your portfolio is interactive now.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function showInfo(message) {
+      alert(message);
+    }
+
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
