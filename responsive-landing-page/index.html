@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Web Portfolio</title>
+  <title>Tarushi Mahesh | Frontend Developer</title>
 
   <style>
     * {
@@ -15,107 +15,119 @@
 
     body {
       background: #f4f4f4;
-      text-align: center;
+      color: #222;
     }
 
+    /* HERO SECTION */
     .hero {
       background: #000;
       color: white;
-      padding: 80px 20px;
+      padding: 140px 20px;
+      text-align: center;
     }
 
-    .features {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 40px 20px;
-      flex-wrap: wrap;
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
     }
 
-    .feature-btn {
-      background: white;
-      padding: 15px 25px;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .hero h2 {
+      font-size: 26px;
+      font-weight: normal;
+      color: #4da3ff;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      opacity: 0.9;
+      margin-bottom: 28px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .cta-btn {
-      margin-top: 30px;
+      display: inline-block;
       background: #1e73ff;
       color: white;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 10px;
-      font-size: 18px;
-      cursor: pointer;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s ease;
     }
 
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
+    .cta-btn:hover {
+      background: #0f5be0;
+      transform: translateY(-2px);
     }
 
-    .modal-content {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 400px;
-      width: 90%;
+    /* PROJECTS PLACEHOLDER */
+    #projects {
+      padding: 80px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    #projects h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    #projects p {
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HERO -->
   <section class="hero">
-    <h1>My Web Portfolio</h1>
-    <p>Clean, responsive, and modular web design</p>
+    <h1>Tarushi Mahesh</h1>
+    <h2>Frontend Developer</h2>
+    <p>
+      I create responsive, user-friendly web interfaces with modern design and clean code.
+    </p>
+
+    <a href="#projects" class="cta-btn">View My Projects</a>
   </section>
 
-  <section class="features">
-    <button class="feature-btn" onclick="showInfo('Responsive Design adapts to all screen sizes.')">
-      Responsive Design
-    </button>
-
-    <button class="feature-btn" onclick="showInfo('Modern UI with clean layout.')">
-      Modern UI
-    </button>
-
-    <button class="feature-btn" onclick="showInfo('Optimized Performance ensures fast loading.')">
-      Optimized Performance
-    </button>
+  <!-- PROJECTS SECTION (next step will design this) -->
+  <section id="projects">
+    <h2>Projects Coming Soon</h2>
+    <p>This section will showcase my real development work.</p>
   </section>
 
-  <button class="cta-btn" onclick="openModal()">Click Me</button>
-
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <h2>It works! 🎉</h2>
-      <p>Your portfolio is interactive now.</p>
-      <button onclick="closeModal()">Close</button>
-    </div>
-  </div>
-
-  <script>
-    function showInfo(message) {
-      alert(message);
-    }
-
-    function openModal() {
-      document.getElementById("modal").style.display = "flex";
-    }
-
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-    }
-  </script>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Tarushi Mahesh • Frontend Developer
+  </footer>
 
 </body>
 </html>
