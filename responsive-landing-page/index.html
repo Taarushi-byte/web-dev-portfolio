@@ -6,6 +6,10 @@
   <title>Tarushi Mahesh | Frontend Developer</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -52,18 +56,20 @@
       display: inline-block;
     }
 
-    .cta-btn:hover { background: #0f5be0; }
+    .cta-btn:hover {
+      background: #0f5be0;
+    }
 
     /* PROJECTS */
     #projects {
-      padding: 80px 20px;
+      padding: 100px 20px;
       background: #fff;
       text-align: center;
     }
 
     #projects h2 {
       font-size: 34px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     .project-grid {
@@ -102,86 +108,4 @@
       display: inline-block;
       margin-right: 8px;
       margin-bottom: 8px;
-      padding: 8px 14px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 13px;
-      color: white;
-      background: #1e73ff;
-      transition: 0.2s;
-    }
-
-    .project-links a:hover {
-      background: #0f5be0;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 22px;
-      font-size: 14px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 36px; }
-      .hero h2 { font-size: 20px; }
-      .hero p { font-size: 15px; }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Tarushi Mahesh</h1>
-    <h2>Frontend Developer</h2>
-    <p>
-      I create responsive, user-friendly web interfaces with modern design and clean code.
-    </p>
-    <a href="#projects" class="cta-btn">View My Projects</a>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <div class="project-grid">
-
-      <div class="project-card">
-        <h3>To-Do List App</h3>
-        <p>Interactive task manager with add, delete, persistence using browser localStorage and dynamic DOM updates.</p>
-        <div class="project-links">
-          <a href="https://taarushi-byte.github.io/web-dev-portfolio/todo-app/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Weather App</h3>
-        <p>Real-time weather search using OpenWeather API, async JavaScript fetch, JSON handling, and error management.</p>
-        <div class="project-links">
-          <a href="https://taarushi-byte.github.io/web-dev-portfolio/weather-app/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Calculator App</h3>
-        <p>Functional calculator supporting arithmetic operations, input handling, and clean JavaScript logic.</p>
-        <div class="project-links">
-          <a href="https://taarushi-byte.github.io/web-dev-portfolio/calculator/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Tarushi Mahesh • Frontend Developer
-  </footer>
-
-</body>
-</html>
+      padding: 8px
