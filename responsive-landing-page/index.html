@@ -28,22 +28,16 @@
       padding: 60px 20px;
     }
 
-    /* HERO */
-    .hero h1 { font-size: 52px; }
-
-    .hero h2 {
-      font-size: 26px;
-      color: #4da3ff;
-      margin: 12px 0;
-      font-weight: normal;
+    h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
     }
 
-    .hero p {
-      max-width: 620px;
-      margin: 20px auto 30px;
+    p {
+      max-width: 720px;
+      line-height: 1.7;
       opacity: 0.9;
       font-size: 17px;
-      line-height: 1.6;
     }
 
     .cta-btn {
@@ -54,9 +48,24 @@
       border: none;
       cursor: pointer;
       font-size: 16px;
+      margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .cta-btn:hover { background: #0f5be0; }
+
+    /* HERO */
+    .hero h1 { font-size: 52px; }
+
+    .hero h2 {
+      font-size: 26px;
+      color: #4da3ff;
+      margin: 12px 0;
+      font-weight: normal;
+    }
+
+    .hero p { margin-top: 15px; }
 
     /* PROJECTS */
     #projects {
@@ -65,17 +74,13 @@
       display: none;
     }
 
-    #projects h2 {
-      font-size: 36px;
-      margin-bottom: 50px;
-    }
-
     .project-grid {
       display: flex;
       gap: 28px;
       justify-content: center;
       flex-wrap: wrap;
       max-width: 1000px;
+      margin-top: 30px;
     }
 
     .project-card {
@@ -93,7 +98,6 @@
       font-size: 14px;
       color: #555;
       margin-bottom: 18px;
-      line-height: 1.5;
     }
 
     .project-links a {
@@ -107,32 +111,16 @@
     }
 
     /* ABOUT */
-    #about {
-      background: #111;
-      display: none;
-    }
-
-    #about h2 {
-      font-size: 36px;
-      margin-bottom: 25px;
-    }
-
-    #about p {
-      max-width: 720px;
-      line-height: 1.8;
-      opacity: 0.9;
-      margin-bottom: 50px; /* MORE SPACE BELOW TEXT */
-      font-size: 17px;
-    }
+    #about { background: #111; display: none; }
 
     /* SKILLS */
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px; /* MORE GAP BETWEEN BOXES */
+      gap: 18px;
       justify-content: center;
       max-width: 750px;
-      margin-top: 20px; /* SPACE ABOVE BOXES */
+      margin-top: 25px;
     }
 
     .skill {
@@ -142,8 +130,19 @@
       font-size: 15px;
     }
 
+    /* CONTACT */
+    #contact { background: #000; display: none; }
+
+    .contact-links a {
+      display: block;
+      color: #4da3ff;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
     footer {
-      margin-top: 60px;
+      margin-top: 40px;
       font-size: 14px;
       color: #888;
     }
@@ -152,7 +151,7 @@
     @media (max-width: 600px) {
       .hero h1 { font-size: 36px; }
       .hero h2 { font-size: 20px; }
-      .hero p { font-size: 15px; }
+      p { font-size: 15px; }
     }
   </style>
 </head>
@@ -202,7 +201,6 @@
 
     </div>
 
-    <br><br>
     <button class="cta-btn" onclick="showAbout()">About Me & Skills</button>
   </section>
 
@@ -227,6 +225,25 @@
       <div class="skill">APIs & LocalStorage</div>
     </div>
 
+    <button class="cta-btn" onclick="showContact()">Contact & Resume</button>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact-links">
+      <a href="mailto:tarushimahesh@gmail.com">tarushimahesh@gmail.com</a>
+      <a href="https://www.linkedin.com/in/tarushi-mahesh-080983260" target="_blank">LinkedIn Profile</a>
+      <a href="https://github.com/Taarushi-byte" target="_blank">GitHub Profile</a>
+    </div>
+
+    <!-- Resume download (upload PDF later as resume.pdf in same folder) -->
+    <a href="resume.pdf" class="cta-btn" download>Download Resume</a>
+
+    <!-- Contact mail button -->
+    <a href="mailto:tarushimahesh@gmail.com" class="cta-btn">Contact Me</a>
+
     <footer>© 2026 Tarushi Mahesh • Frontend Developer</footer>
   </section>
 
@@ -239,6 +256,11 @@
     function showAbout() {
       document.getElementById("projects").style.display = "none";
       document.getElementById("about").style.display = "flex";
+    }
+
+    function showContact() {
+      document.getElementById("about").style.display = "none";
+      document.getElementById("contact").style.display = "flex";
     }
   </script>
 
