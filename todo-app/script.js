@@ -1,44 +1,31 @@
 // Select elements
-const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("list-container");
+const inputBox = document.querySelector("input");
+const addBtn = document.querySelector("button");
+const listContainer = document.createElement("ul");
 
-// Add task function
-function addTask() {
-    if (inputBox.value === '') {
-        alert("You must write something!");
-    } else {
-        let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        listContainer.appendChild(li);
+document.querySelector(".todo-container").appendChild(listContainer);
 
-        // Add delete button
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        li.appendChild(span);
+// ADD TASK
+addBtn.addEventListener("click", function () {
+    if (inputBox.value.trim() === "") {
+        alert("Please enter a task");
+        return;
     }
+
+    let li = document.createElement("li");
+    li.textContent = inputBox.value;
+
+    // DELETE BUTTON
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "❌";
+    deleteBtn.style.marginLeft = "10px";
+
+    deleteBtn.addEventListener("click", function () {
+        li.remove();
+    });
+
+    li.appendChild(deleteBtn);
+    listContainer.appendChild(li);
+
     inputBox.value = "";
-    saveData();
-}
-
-// Click events (check or delete)
-listContainer.addEventListener("click", function(e) {
-    if (e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
-        saveData();
-    } else if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
-        saveData();
-    }
-}, false);
-
-// Save to browser
-function saveData() {
-    localStorage.setItem("data", listContainer.innerHTML);
-}
-
-// Load saved data
-function showTask() {
-    listContainer.innerHTML = localStorage.getItem("data");
-}
-
-showTask();
+});
