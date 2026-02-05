@@ -2,24 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Landing Page</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    /* HERO */
+    .hero {
+      background: #000;
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      opacity: 0.8;
+    }
+
+    /* FEATURES */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .feature-btn {
+      background: white;
+      padding: 15px 25px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .feature-btn:hover {
+      transform: translateY(-3px);
+      background: #e9f1ff;
+    }
+
+    /* CTA */
+    .cta-btn {
+      margin-top: 30px;
+      background: #1e73ff;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #0f5be0;
+    }
+
+    /* MODAL */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .close {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #ff4d4d;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .feature-btn {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header>
+
+  <!-- HERO -->
+  <section class="hero">
     <h1>My Web Portfolio</h1>
     <p>Clean, responsive, and modular web design</p>
-  </header>
-
-  <section class="features">
-    <div class="card">Responsive Design</div>
-    <div class="card">Modern UI</div>
-    <div class="card">Optimized Performance</div>
   </section>
 
-  <button onclick="showMessage()">Click Me</button>
+  <!-- FEATURES -->
+  <section class="features">
+    <button class="feature-btn" onclick="showInfo('Responsive Design adapts to all screen sizes.')">
+      Responsive Design
+    </button>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <button class="feature-btn" onclick="showInfo('Modern UI with clean layout and smooth UX.')">
+      Modern UI
+    </button>
+
+    <button class="feature-btn" onclick="showInfo('Optimized performance for fast lo
+
