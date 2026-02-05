@@ -1,15 +1,17 @@
-# web-dev-portfolio
-Web development projects using HTML, CSS, JavaScript, React, and Python
-# Web Dev Portfolio
+# 🌐 Web Development Portfolio
 
-This repository contains my web development projects.
+This repository contains my web development projects built using HTML, CSS, JavaScript, and real-world APIs.
 
-🔗 Live Projects
+## 🔗 Live Projects
 
-1. To-Do App
+ 1️⃣ Responsive Landing Page  
+https://taarushi-byte.github.io/web-dev-portfolio/responsive-landing-page/
+
+ 2️⃣ To-Do List App (with localStorage)  
 https://taarushi-byte.github.io/web-dev-portfolio/todo-app/
 
-2. Responsive Landing Page
- https://taarushi-byte.github.io/web-dev-portfolio/responsive-landing-page/
+ 3️⃣ Weather App (API-based)  
+https://taarushi-byte.github.io/web-dev-portfolio/weather-app/
 
-More projects coming soon.
+
+More projects coming soon 🚀
