@@ -102,3 +102,133 @@
     }
 
     /* ABOUT */
+    #about {
+      background: #111;
+      display: none;
+    }
+
+    #about p {
+      max-width: 700px;
+      line-height: 1.7;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      max-width: 700px;
+    }
+
+    .skill {
+      background: #1e73ff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 36px; }
+      .hero h2 { font-size: 20px; }
+      .hero p { font-size: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>Tarushi Mahesh</h1>
+    <h2>Frontend Developer</h2>
+    <p>
+      I create responsive, user-friendly web interfaces with modern design and clean code.
+    </p>
+
+    <button class="cta-btn" onclick="showProjects()">View My Projects</button>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>To-Do List App</h3>
+        <p>Task manager with localStorage persistence and dynamic DOM updates.</p>
+        <div class="project-links">
+          <a href="https://taarushi-byte.github.io/web-dev-portfolio/todo-app/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Real-time weather search using OpenWeather API and async JavaScript.</p>
+        <div class="project-links">
+          <a href="https://taarushi-byte.github.io/web-dev-portfolio/weather-app/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Calculator App</h3>
+        <p>Functional calculator with arithmetic logic and clean JS implementation.</p>
+        <div class="project-links">
+          <a href="https://taarushi-byte.github.io/web-dev-portfolio/calculator/" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br>
+    <button class="cta-btn" onclick="showAbout()">About Me & Skills</button>
+  </section>
+
+  <!-- ABOUT + SKILLS -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a student focused on Frontend Development with a strong interest in
+      building real-world web applications. I enjoy creating responsive user
+      interfaces, working with modern web technologies, and continuously improving
+      my practical development skills through hands-on projects.
+    </p>
+
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">APIs & LocalStorage</div>
+    </div>
+
+    <footer>© 2026 Tarushi Mahesh • Frontend Developer</footer>
+  </section>
+
+  <script>
+    function showProjects() {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("projects").style.display = "flex";
+    }
+
+    function showAbout() {
+      document.getElementById("projects").style.display = "none";
+      document.getElementById("about").style.display = "flex";
+    }
+  </script>
+
+</body>
+</html>
