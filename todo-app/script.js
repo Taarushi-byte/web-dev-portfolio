@@ -1,31 +1,28 @@
 // Select elements
-const inputBox = document.querySelector("input");
+const input = document.querySelector("input");
 const addBtn = document.querySelector("button");
-const listContainer = document.createElement("ul");
+const list = document.createElement("ul");
 
-document.querySelector(".todo-container").appendChild(listContainer);
+document.body.appendChild(list);
 
-// ADD TASK
 addBtn.addEventListener("click", function () {
-    if (inputBox.value.trim() === "") {
-        alert("Please enter a task");
-        return;
-    }
+    const taskText = input.value.trim();
 
-    let li = document.createElement("li");
-    li.textContent = inputBox.value;
+    if (taskText === "") return;
 
-    // DELETE BUTTON
-    let deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "❌";
-    deleteBtn.style.marginLeft = "10px";
+    const li = document.createElement("li");
+    li.textContent = taskText;
 
-    deleteBtn.addEventListener("click", function () {
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "❌";
+    delBtn.style.marginLeft = "10px";
+
+    delBtn.addEventListener("click", function () {
         li.remove();
     });
 
-    li.appendChild(deleteBtn);
-    listContainer.appendChild(li);
+    li.appendChild(delBtn);
+    list.appendChild(li);
 
-    inputBox.value = "";
+    input.value = "";
 });
