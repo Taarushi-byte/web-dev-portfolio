@@ -50,28 +50,21 @@
       color: white;
       padding: 14px 30px;
       border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
       border: none;
       cursor: pointer;
       font-size: 16px;
     }
 
-    .cta-btn:hover {
-      background: #0f5be0;
-    }
+    .cta-btn:hover { background: #0f5be0; }
 
-    /* PROJECTS SCREEN */
+    /* PROJECTS */
     #projects {
       background: #f4f4f4;
       color: #222;
-      display: none; /* hidden initially */
+      display: none;
     }
 
-    #projects h2 {
-      font-size: 34px;
-      margin-bottom: 40px;
-    }
+    #projects h2 { font-size: 34px; margin-bottom: 40px; }
 
     .project-grid {
       display: flex;
@@ -87,29 +80,19 @@
       border-radius: 12px;
       width: 280px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.3s;
       text-align: left;
     }
 
-    .project-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .project-card h3 {
-      margin-bottom: 10px;
-    }
+    .project-card h3 { margin-bottom: 10px; }
 
     .project-card p {
       font-size: 14px;
       color: #555;
       margin-bottom: 18px;
-      line-height: 1.5;
     }
 
     .project-links a {
       display: inline-block;
-      margin-right: 8px;
-      margin-bottom: 8px;
       padding: 8px 14px;
       border-radius: 6px;
       text-decoration: none;
@@ -118,75 +101,4 @@
       background: #1e73ff;
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 36px; }
-      .hero h2 { font-size: 20px; }
-      .hero p { font-size: 15px; }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HERO SCREEN -->
-  <section class="hero" id="home">
-    <h1>Tarushi Mahesh</h1>
-    <h2>Frontend Developer</h2>
-    <p>
-      I create responsive, user-friendly web interfaces with modern design and clean code.
-    </p>
-
-    <button class="cta-btn" onclick="showProjects()">View My Projects</button>
-  </section>
-
-  <!-- PROJECTS SCREEN -->
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <div class="project-grid">
-
-      <div class="project-card">
-        <h3>To-Do List App</h3>
-        <p>Task manager with add, delete, localStorage persistence, and dynamic DOM updates.</p>
-        <div class="project-links">
-          <a href="https://taarushi-byte.github.io/web-dev-portfolio/todo-app/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Weather App</h3>
-        <p>Real-time weather search using OpenWeather API, async fetch, and error handling.</p>
-        <div class="project-links">
-          <a href="https://taarushi-byte.github.io/web-dev-portfolio/weather-app/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Calculator App</h3>
-        <p>Functional calculator with arithmetic logic and clean JavaScript implementation.</p>
-        <div class="project-links">
-          <a href="https://taarushi-byte.github.io/web-dev-portfolio/calculator/" target="_blank">Live Demo</a>
-        </div>
-      </div>
-
-    </div>
-
-    <footer>© 2026 Tarushi Mahesh • Frontend Developer</footer>
-  </section>
-
-  <script>
-    function showProjects() {
-      document.getElementById("home").style.display = "none";
-      document.getElementById("projects").style.display = "flex";
-    }
-  </script>
-
-</body>
-</html>
+    /* ABOUT */
