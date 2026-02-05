@@ -25,7 +25,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     /* HERO */
@@ -34,15 +34,16 @@
     .hero h2 {
       font-size: 26px;
       color: #4da3ff;
-      margin: 10px 0;
+      margin: 12px 0;
       font-weight: normal;
     }
 
     .hero p {
       max-width: 620px;
-      margin: 15px auto 25px;
+      margin: 20px auto 30px;
       opacity: 0.9;
       font-size: 17px;
+      line-height: 1.6;
     }
 
     .cta-btn {
@@ -64,11 +65,14 @@
       display: none;
     }
 
-    #projects h2 { font-size: 34px; margin-bottom: 40px; }
+    #projects h2 {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
 
     .project-grid {
       display: flex;
-      gap: 25px;
+      gap: 28px;
       justify-content: center;
       flex-wrap: wrap;
       max-width: 1000px;
@@ -76,24 +80,25 @@
 
     .project-card {
       background: #fff;
-      padding: 25px;
-      border-radius: 12px;
+      padding: 28px;
+      border-radius: 14px;
       width: 280px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
       text-align: left;
     }
 
-    .project-card h3 { margin-bottom: 10px; }
+    .project-card h3 { margin-bottom: 12px; }
 
     .project-card p {
       font-size: 14px;
       color: #555;
       margin-bottom: 18px;
+      line-height: 1.5;
     }
 
     .project-links a {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 9px 16px;
       border-radius: 6px;
       text-decoration: none;
       font-size: 13px;
@@ -107,32 +112,38 @@
       display: none;
     }
 
+    #about h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+    }
+
     #about p {
-      max-width: 700px;
-      line-height: 1.7;
+      max-width: 720px;
+      line-height: 1.8;
       opacity: 0.9;
-      margin-bottom: 30px;
-      font-size: 16px;
+      margin-bottom: 50px; /* MORE SPACE BELOW TEXT */
+      font-size: 17px;
     }
 
     /* SKILLS */
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 18px; /* MORE GAP BETWEEN BOXES */
       justify-content: center;
-      max-width: 700px;
+      max-width: 750px;
+      margin-top: 20px; /* SPACE ABOVE BOXES */
     }
 
     .skill {
       background: #1e73ff;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-size: 14px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 15px;
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 60px;
       font-size: 14px;
       color: #888;
     }
@@ -206,6 +217,7 @@
     </p>
 
     <h2>Skills</h2>
+
     <div class="skills-grid">
       <div class="skill">HTML</div>
       <div class="skill">CSS</div>
