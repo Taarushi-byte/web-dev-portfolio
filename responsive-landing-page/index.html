@@ -6,10 +6,6 @@
   <title>Tarushi Mahesh | Frontend Developer</title>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -18,18 +14,21 @@
     }
 
     body {
-      background: #f4f4f4;
-      color: #222;
+      background: #000;
+      color: #fff;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     /* HERO */
-    .hero {
-      background: #000;
-      color: white;
-      padding: 140px 20px;
-      text-align: center;
-    }
-
     .hero h1 { font-size: 52px; }
 
     .hero h2 {
@@ -53,23 +52,25 @@
       border-radius: 8px;
       text-decoration: none;
       transition: 0.3s;
-      display: inline-block;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
     }
 
     .cta-btn:hover {
       background: #0f5be0;
     }
 
-    /* PROJECTS */
+    /* PROJECTS SCREEN */
     #projects {
-      padding: 100px 20px;
-      background: #fff;
-      text-align: center;
+      background: #f4f4f4;
+      color: #222;
+      display: none; /* hidden initially */
     }
 
     #projects h2 {
       font-size: 34px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     .project-grid {
@@ -77,13 +78,14 @@
       gap: 25px;
       justify-content: center;
       flex-wrap: wrap;
+      max-width: 1000px;
     }
 
     .project-card {
-      background: #f9f9f9;
+      background: #fff;
       padding: 25px;
       border-radius: 12px;
-      width: 300px;
+      width: 280px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       transition: 0.3s;
       text-align: left;
@@ -114,20 +116,12 @@
       font-size: 13px;
       color: white;
       background: #1e73ff;
-      transition: 0.2s;
     }
 
-    .project-links a:hover {
-      background: #0f5be0;
-    }
-
-    /* FOOTER */
     footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 22px;
+      margin-top: 40px;
       font-size: 14px;
+      color: #666;
     }
 
     /* MOBILE */
@@ -141,18 +135,18 @@
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO SCREEN -->
+  <section class="hero" id="home">
     <h1>Tarushi Mahesh</h1>
     <h2>Frontend Developer</h2>
     <p>
       I create responsive, user-friendly web interfaces with modern design and clean code.
     </p>
 
-    <a href="#projects" class="cta-btn">View My Projects</a>
+    <button class="cta-btn" onclick="showProjects()">View My Projects</button>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS SCREEN -->
   <section id="projects">
     <h2>My Projects</h2>
 
@@ -160,7 +154,7 @@
 
       <div class="project-card">
         <h3>To-Do List App</h3>
-        <p>Interactive task manager with add, delete, and localStorage persistence using dynamic DOM updates.</p>
+        <p>Task manager with add, delete, localStorage persistence, and dynamic DOM updates.</p>
         <div class="project-links">
           <a href="https://taarushi-byte.github.io/web-dev-portfolio/todo-app/" target="_blank">Live Demo</a>
         </div>
@@ -168,7 +162,7 @@
 
       <div class="project-card">
         <h3>Weather App</h3>
-        <p>Real-time weather search using OpenWeather API, async fetch, JSON handling, and error management.</p>
+        <p>Real-time weather search using OpenWeather API, async fetch, and error handling.</p>
         <div class="project-links">
           <a href="https://taarushi-byte.github.io/web-dev-portfolio/weather-app/" target="_blank">Live Demo</a>
         </div>
@@ -176,19 +170,23 @@
 
       <div class="project-card">
         <h3>Calculator App</h3>
-        <p>Functional calculator supporting arithmetic operations, input handling, and clean JavaScript logic.</p>
+        <p>Functional calculator with arithmetic logic and clean JavaScript implementation.</p>
         <div class="project-links">
           <a href="https://taarushi-byte.github.io/web-dev-portfolio/calculator/" target="_blank">Live Demo</a>
         </div>
       </div>
 
     </div>
+
+    <footer>© 2026 Tarushi Mahesh • Frontend Developer</footer>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Tarushi Mahesh • Frontend Developer
-  </footer>
+  <script>
+    function showProjects() {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("projects").style.display = "flex";
+    }
+  </script>
 
 </body>
 </html>
