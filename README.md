@@ -1,8 +1,8 @@
 # 🌐 Web Development Portfolio
 ## 🔥 Highlights
-- 📊 Analyzed real-world COVID data
-- 📈 Created trend visualizations
-- 🧠 Extracted actionable insights
+- 🌐 Built responsive web interfaces
+- 🎨 Focus on UI/UX design
+- ⚡ Showcases frontend skills
 This repository contains my web development projects built using HTML, CSS, JavaScript, and real-world APIs.  
 These projects demonstrate responsive UI design, DOM manipulation, browser storage, API integration, and problem-solving skills relevant to Software Development Engineering (Web) roles.
 
